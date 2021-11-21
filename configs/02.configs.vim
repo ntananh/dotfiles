@@ -74,23 +74,25 @@ noremap <C-k> <C-w><C-k>
 noremap <C-l> <C-w><C-l>
 noremap <C-h> <C-w><C-h>
 
-noremap <C-v> "*p
-
 noremap <silent> <C-left> :vertical resize +3<CR>
 noremap <silent> <C-right> :vertical resize -3<CR>
 noremap <silent> <C-up> :resize +3<CR>
 noremap <silent> <C-down> :resize -3<CR>
+
 
 " change 2 split windowns from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 "copy/pase
-vnoremap < <gv
-vnoremap > >gv
-"vnoremap <silent> y y:call ClipboardYank()<cr>
-"vnoremap <silent> d d:call ClipboardYank()<cr>
-"nnoremap <silent> p :call ClipboardPaste()<cr>p
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
 
-
-
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
