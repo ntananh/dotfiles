@@ -21,6 +21,7 @@ Plug 'alvan/vim-closetag'
 Plug 'luochen1990/rainbow' "rainbow bracket
 
 " Theme
+
 Plug 'joshdick/onedark.vim' " Onedark theme
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 
@@ -37,6 +38,9 @@ Plug 'gko/vim-coloresque'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
+"Terminal
+Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 

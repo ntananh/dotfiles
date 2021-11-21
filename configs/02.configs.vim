@@ -5,13 +5,11 @@ set listchars=tab:\\ ,eol:¬,trail:⋅
 filetype off
 filetype plugin on
 filetype plugin indent on
-set guifont=FiraCode\ Nerd\ Font:12
+set guifont=FiraCode\ Nerd\ Font:14
 set nocompatible
 
-syntax enable
 syntax on
 set termguicolors
-set background=dark
 set encoding=UTF-8
 set mouse=a
 set scroll=10
@@ -34,7 +32,6 @@ set ignorecase
 set autoindent
 set smartcase
 set smartindent
-set cursorline
 
 set noexpandtab
 set smarttab
@@ -63,9 +60,8 @@ noremap H ^
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
-nnoremap <C-w>M <C-W>\| <C-W>_  "maximize a buffer 
-nnoremap <C-w>m <C-W>= "minimize a buffer"
-"
+nnoremap <C-w>M <C-W>\| <C-W>_   
+nnoremap <C-w>m <C-W>= 
 "vmap
 vnoremap jk <esc>
 vnoremap L $
@@ -77,6 +73,8 @@ noremap <C-j> <C-w><C-j>
 noremap <C-k> <C-w><C-k>
 noremap <C-l> <C-w><C-l>
 noremap <C-h> <C-w><C-h>
+
+noremap <C-v> "*p
 
 noremap <silent> <C-left> :vertical resize +3<CR>
 noremap <silent> <C-right> :vertical resize -3<CR>
