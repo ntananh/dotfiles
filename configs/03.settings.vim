@@ -33,34 +33,29 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 noremap <C-n> :NERDTreeToggle<CR>
 noremap <M-r> :NERDTreeRefreshRoot<CR>
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
 let g:NERDTreeShowLineNumbers=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=30
-let g:NERDTreeGitStatusUseNerdFonts=1 " should install nerd font
-let g:NERDTreeGetStatusConcealBrackets=1
+let g:NERDTreeDirArrowExpandable=""
+let g:NERDTreeDirArrowCollapsible=""
+let g:NERDTreeGitStatusConcealBrackets = 0 " default: 0
 let g:NERDTreeIgnore=["\.git", "node_modules", "vendor", "dist", ".idea"] 
-let g:nerdtree_sync_cursorline = 1
-let g:NERDTreeHighlightCursorline = 1
 
-" file highlight
-let g:NERDTreeFileExtentionHighlightFullName=1
-let g:NERDTreeExactMatchHighlightFullName=1
-let g:NERDTreeFileExtensionHighlightFullName=1
+let g:NERDTreeHighlightCursorline = 0
+let g:NERDTreeHighlightFolders = 1 
 
 " git status indicator
 let g:NEDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :' ✹',
-                \ 'Staged'    :' ✚',
-                \ 'Untracked' :' ✭',
-                \ 'Renamed'   :' ➜',
-                \ 'Unmerged'  :' ═',
-                \ 'Deleted'   :' ✖',
-                \ 'Dirty'     :' ✗',
-                \ 'Ignored'   :' ☒',
-                \ 'Clean'     :' ',
-                \ 'Unknown'   :' ?'
+                \ 'Modified'  :'⁙',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'⨱',
+                \ 'Unmerged'  :'⇉',
+                \ 'Deleted'   :'⋈',
+                \ 'Dirty'     :'↯',
+                \ 'Ignored'   :'◌',
+                \ 'Clean'     :'',
+                \ 'Unknown'   :'ʡ'
                 \ }
 "}}
 

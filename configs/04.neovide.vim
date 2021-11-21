@@ -1,7 +1,15 @@
-let g:neovide_remember_window_size =v:true
-let g:neovide_input_use_logo=v:true
-let g:neovide_refresh_rate=140
-let g:neovide_no_idle=v:true
-
+" neovide specific
+function Neovide_fullscreen()
+    if g:neovide_fullscreen == v:true
+        let g:neovide_fullscreen=v:false
+    else
+        let g:neovide_fullscreen=v:true
+    endif
+endfunction
+map <F11> :call Neovide_fullscreen()<cr>
+" Temperory till, neovide resolves the blur issues
+let g:neovide_window_floating_opacity = 0
+let g:neovide_floating_blur = 0
+let g:neovide_floating_opacity = 0.9
 
 

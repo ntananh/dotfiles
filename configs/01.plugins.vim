@@ -21,13 +21,12 @@ Plug 'alvan/vim-closetag'
 Plug 'luochen1990/rainbow' "rainbow bracket
 
 " Theme
-
 Plug 'joshdick/onedark.vim' " Onedark theme
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 
 " Vim airline
 Plug 'vim-airline/vim-airline-themes' " Status bar theme
-Plug 'ryanoasis/vim-devicons' " Icon
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-surround' " Surround
 Plug 'glepnir/dashboard-nvim'
 
