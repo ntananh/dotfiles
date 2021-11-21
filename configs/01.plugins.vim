@@ -3,8 +3,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-
-call plug#begin('~/.config/nvim/autoload/plugged')
+call plug#begin(stdpath('config').'/autoload/plugged')
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
