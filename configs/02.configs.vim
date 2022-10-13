@@ -1,7 +1,7 @@
 let mapleader = "\<Space>"
 
 set list
-set listchars=tab:\\ ,eol:¬,trail:⋅
+set listchars=tab:▸\ ,eol:¬,trail:⋅
 filetype off
 filetype plugin on
 filetype plugin indent on
@@ -35,9 +35,9 @@ set smartindent
 
 set noexpandtab
 set smarttab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType css setlocal ts=2 sts=2 sw=2
@@ -62,11 +62,11 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 nnoremap <C-w>M <C-W>\| <C-W>_   
 nnoremap <C-w>m <C-W>= 
+
 "vmap
 vnoremap jk <esc>
 vnoremap L $
 vnoremap H ^
-
 
 "splits and tabled files
 noremap <C-j> <C-w><C-j>
@@ -78,7 +78,6 @@ noremap <silent> <C-left> :vertical resize +3<CR>
 noremap <silent> <C-right> :vertical resize -3<CR>
 noremap <silent> <C-up> :resize +3<CR>
 noremap <silent> <C-down> :resize -3<CR>
-
 
 " change 2 split windowns from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H
@@ -96,3 +95,9 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+" Search selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+" Remove highlight
+noremap <silent> <esc> :nohlsearch <CR>
