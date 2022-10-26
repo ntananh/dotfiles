@@ -36,8 +36,8 @@ noremap <M-r> :NERDTreeRefreshRoot<CR>
 let g:NERDTreeShowLineNumbers=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=30
-let g:NERDTreeDirArrowExpandable=""
-let g:NERDTreeDirArrowCollapsible=""
+let g:NERDTreeDirArrowExpandable="▶︎"
+let g:NERDTreeDirArrowCollapsible="▼"
 let g:NERDTreeGitStatusConcealBrackets = 0 " default: 0
 let g:NERDTreeIgnore=["\.git", "node_modules", "vendor", "dist", ".idea"] 
 
@@ -57,7 +57,18 @@ let g:NEDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'',
                 \ 'Unknown'   :'ʡ'
                 \ }
+" Anoying things witg square backet in nerdtree
+augroup nerdtree
+  autocmd!
+  autocmd FileType nerdtree syntax clear NERDTreeFlags
+  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+  autocmd FileType nerdtree setlocal conceallevel=3
+  autocmd FileType nerdtree setlocal concealcursor=nvic
+augroup END
+
 "}}
+
 
 
 "{{ Airline 

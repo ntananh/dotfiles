@@ -11,7 +11,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Nerd :))
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'johnstef99/vim-nerdtree-syntax-highlight' " use this fork to resolve error E5248
 Plug 'scrooloose/nerdcommenter'
 Plug 'unkiwii/vim-nerdtree-sync'
 
@@ -28,7 +28,6 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'vim-airline/vim-airline-themes' " Status bar theme
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-surround' " Surround
-Plug 'glepnir/dashboard-nvim'
 
 " color preview
 Plug 'gko/vim-coloresque'

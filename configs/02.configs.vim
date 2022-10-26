@@ -57,9 +57,6 @@ inoremap jk <esc>
 " nmap
 noremap L $
 noremap H ^
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
 nnoremap <C-w>M <C-W>\| <C-W>_   
 nnoremap <C-w>m <C-W>= 
 
@@ -68,20 +65,25 @@ vnoremap jk <esc>
 vnoremap L $
 vnoremap H ^
 
-"splits and tabled files
+"splits and tabled files, move around tabs
 noremap <C-j> <C-w><C-j>
 noremap <C-k> <C-w><C-k>
 noremap <C-l> <C-w><C-l>
 noremap <C-h> <C-w><C-h>
 
-noremap <silent> <C-left> :vertical resize +3<CR>
-noremap <silent> <C-right> :vertical resize -3<CR>
-noremap <silent> <C-up> :resize +3<CR>
-noremap <silent> <C-down> :resize -3<CR>
+noremap <silent> <C-]> :vertical resize +3<CR>
+noremap <silent> <C-[> :vertical resize -3<CR>
+noremap <silent> <C-.> :resize +3<CR>
+noremap <silent> <C-,> :resize -3<CR>
 
 " change 2 split windowns from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
+
+" move around buffers
+map <Leader>l :bn<CR>
+map <Leader>h :bp<CR>
+map <Leader>d :bd<CR>
 
 "copy/pase
 " " Copy to clipboard
