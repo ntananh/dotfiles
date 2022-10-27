@@ -8,6 +8,10 @@ call plug#begin(stdpath('config').'/autoload/plugged')
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Nerd :))
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'

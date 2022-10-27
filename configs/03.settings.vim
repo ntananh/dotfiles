@@ -23,13 +23,10 @@ colorscheme onedark
 let g:rainbow_active = 1
 "}}
 
-
-
 "{{ NERDTree
 "
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
 
 noremap <C-n> :NERDTreeToggle<CR>
 noremap <M-r> :NERDTreeRefreshRoot<CR>
@@ -66,10 +63,7 @@ augroup nerdtree
   autocmd FileType nerdtree setlocal conceallevel=3
   autocmd FileType nerdtree setlocal concealcursor=nvic
 augroup END
-
 "}}
-
-
 
 "{{ Airline 
 let g:airline_theme='deus'
@@ -112,6 +106,11 @@ let g:closetag_shortcut = '>'
 let g:enable_italic_font = 1
 let g:enable_bold_font = 1
 
+"}}
+
+"FZF {{
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow " Use ripgrep instead of grep
 "}}
 
 "{{ Dashboard

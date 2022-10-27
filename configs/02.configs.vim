@@ -148,6 +148,12 @@ nnoremap <silent> <C-;> :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> <C-;> :exe "tabn ".g:lasttab<cr>
 "}}
 
+" Mapping configs for FZF {{
+noremap <silent> <C-f> :Files<CR>
+noremap <silent> <Leader>f :Rg<CR>
+" }}
+
+
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType css setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
