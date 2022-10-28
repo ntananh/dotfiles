@@ -10,6 +10,7 @@ filetype off
 filetype plugin on
 filetype plugin indent on
 
+set hidden
 set nocompatible
 set tabpagemax=100
 set guitablabel=\[%N\]\ %t\ %M 
