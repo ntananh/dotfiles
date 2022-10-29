@@ -4,7 +4,7 @@ syntax on
 colorscheme onedark
 
 set list
-set listchars=tab:▸\ ,eol:¬,trail:⋅
+set listchars=eol:¬,trail:⋅
 
 filetype off
 filetype plugin on
@@ -15,7 +15,7 @@ set nocompatible
 set tabpagemax=100
 set guitablabel=\[%N\]\ %t\ %M 
 " Setting gui font {{
-" set guifont=FiraCode\ Nerd\ Font:14
+set guifont=FiraCode\ Nerd\ Font:14
 " set guifont=JetBrains\ Mono:h14
 "}}
 
