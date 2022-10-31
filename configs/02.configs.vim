@@ -91,10 +91,10 @@ noremap <C-l> <C-w><C-l>
 noremap <C-h> <C-w><C-h>
 
 " map for split buffers
-nnoremap ,v <C-w>v "vertical split
-nnoremap ,h <C-w>s "horizontal split
-nnoremap <C-w>M <C-W>\| <C-W>_  "remove split 
-nnoremap <C-w>m <C-W>= "make the splits are the same size
+nnoremap ,v <C-w>v 
+nnoremap ,h <C-w>s 
+nnoremap <C-w>M <C-W>\| <C-W>_  
+nnoremap <C-w>m <C-W>= 
 
 " resize split buffers
 noremap <silent> <C-]> :vertical resize +3<CR>
