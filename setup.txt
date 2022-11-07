@@ -1,10 +1,12 @@
 Tools:
+	- alacritty
 	- tmux 
 	- fzf: Fuzzy Finder
 	- rg: RipGrep
 	- bat: Preview file
 	- fd-find: Alternative to `find`
 	- git: Git
+	- lazygit
 	- neovim: Neovim 
 	- zsh
 	- oh-my-zsh
