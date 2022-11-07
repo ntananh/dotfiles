@@ -1,0 +1,16 @@
+Tools:
+	- tmux 
+	- fzf: Fuzzy Finder
+	- rg: RipGrep
+	- bat: Preview file
+	- fd-find: Alternative to `find`
+	- git: Git
+	- neovim: Neovim 
+	- zsh
+	- oh-my-zsh
+	- rip-grep
+	- htop
+	- exa
+
+Font:
+	- JetBrains Mono Nerd Font Complete Mono
