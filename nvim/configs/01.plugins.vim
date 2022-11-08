@@ -5,6 +5,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin(stdpath('config').'/autoload/plugged')
 
+" Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

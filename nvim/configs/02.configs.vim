@@ -15,7 +15,7 @@ set nocompatible
 set tabpagemax=100
 set guitablabel=\[%N\]\ %t\ %M 
 " Setting gui font {{
-set guifont=FiraCode\ Nerd\ Font:14
+" set guifont=FiraCode\ Nerd\ Font:14
 " set guifont=JetBrains\ Mono:h14
 "}}
 
