@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # fzf ctrl-r and alt-c behavior
 export FZF_DEFAULT_COMMAND="fd --follow --hidden --exclude .git"
 export FZF_DEFAULT_OPTS="--multi --border --no-height --extended"
-export FZF_COMPLETION_OPTS='--border  --info=inline'
+export FZF_COMPLETION_OPTS='--border --info=inline'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND -tf"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND -td"
 
@@ -127,3 +127,5 @@ alias lg="lazygit"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Install the completion for zsh `alacritty`
+fpath+=${ZDOTDIR:-~}/.zsh_functions
