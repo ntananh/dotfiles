@@ -67,9 +67,9 @@ map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 " move around buffers
-map <Leader>l :bn<CR>
-map <Leader>h :bp<CR>
-map <Leader>d :bd<CR>
+map <M-right> :bn<CR>
+map <M-left> :bp<CR>
+map <M-d> :bd<CR>
 
 "imap
 inoremap jk <esc>
@@ -85,22 +85,22 @@ vnoremap jk <esc>
 
 " Slit and tabled files mapping {{
 "splits and tabled files, move around tabs
-noremap <C-j> <C-w><C-j>
-noremap <C-k> <C-w><C-k>
-noremap <C-l> <C-w><C-l>
-noremap <C-h> <C-w><C-h>
+" noremap <C-j> <C-w><C-j>
+" noremap <C-k> <C-w><C-k>
+" noremap <C-l> <C-w><C-l>
+" noremap <C-h> <C-w><C-h>
 
 " map for split buffers
 nnoremap ,v <C-w>v 
 nnoremap ,h <C-w>s 
-nnoremap <C-w>M <C-W>\| <C-W>_  
-nnoremap <C-w>m <C-W>= 
+nnoremap <C-w>h <C-W>\| <C-W>_  
+nnoremap <C-w>e <C-W>= 
 
 " resize split buffers
-noremap <silent> <C-]> :vertical resize +3<CR>
-noremap <silent> <C-[> :vertical resize -3<CR>
-noremap <silent> <C-.> :resize +3<CR>
-noremap <silent> <C-,> :resize -3<CR>
+noremap <silent> <leader>+ :vertical resize +3<CR>
+noremap <silent> <leader>- :vertical resize -3<CR>
+noremap <silent> <leader>. :resize +3<CR>
+noremap <silent> <leader>, :resize -3<CR>
 "}}
 
 " Copy/pase {{
@@ -112,8 +112,7 @@ nnoremap  <leader>yy  "+yy
 
 " Paste from clipboard
 nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
+nnoremap <leader>P "+P vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 "}}
 
@@ -137,11 +136,11 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 " Go to left/right tab
-noremap <silent> <A-Right> gt
-noremap <silent> <A-Left> gT
+" noremap <silent> <A-Right> gt
+" noremap <silent> <A-Left> gT
 
-vnoremap <silent> <A-Right> gt
-vnoremap <silent> <A-Left> gT
+" vnoremap <silent> <A-Right> gt
+" vnoremap <silent> <A-Left> gT
 
 " Go to last active tab
 au TabLeave * let g:lasttab = tabpagenr()
@@ -151,7 +150,7 @@ vnoremap <silent> <C-;> :exe "tabn ".g:lasttab<cr>
 
 " Mapping configs for FZF {{
 noremap <silent> <C-f> :Files<CR>
-noremap <silent> <Leader>f :Rg<CR>
+noremap <silent> <M-f> :Rg<CR>
 " }}
 
 

@@ -44,5 +44,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
 
+" Tmux
+Plug 'alexghergh/nvim-tmux-navigation'
+
 call plug#end()
 
