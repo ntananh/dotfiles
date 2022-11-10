@@ -13,11 +13,7 @@ filetype plugin indent on
 set hidden
 set nocompatible
 set tabpagemax=100
-set guitablabel=\[%N\]\ %t\ %M 
-" Setting gui font {{
-" set guifont=FiraCode\ Nerd\ Font:14
-" set guifont=JetBrains\ Mono:h14
-"}}
+set guitablabel=\[%N\]\ %t\ %M
 
 set mouse=a
 set scroll=10
@@ -97,10 +93,8 @@ nnoremap <C-w>h <C-W>\| <C-W>_
 nnoremap <C-w>e <C-W>= 
 
 " resize split buffers
-noremap <silent> <leader>+ :vertical resize +3<CR>
-noremap <silent> <leader>- :vertical resize -3<CR>
-noremap <silent> <leader>. :resize +3<CR>
-noremap <silent> <leader>, :resize -3<CR>
+nnoremap + :res +5<CR>
+nnoremap _ :res -5<CR>
 "}}
 
 " Copy/pase {{
@@ -112,7 +106,8 @@ nnoremap  <leader>yy  "+yy
 
 " Paste from clipboard
 nnoremap <leader>p "+p
-nnoremap <leader>P "+P vnoremap <leader>p "+p
+nnoremap <leader>P "+P 
+vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 "}}
 
@@ -153,8 +148,6 @@ noremap <silent> <C-f> :Files<CR>
 noremap <silent> <M-f> :Rg<CR>
 " }}
 
-
 autocmd FileType html setlocal ts=2 sts=2 sw=2
 autocmd FileType css setlocal ts=2 sts=2 sw=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-

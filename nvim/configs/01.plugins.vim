@@ -47,5 +47,8 @@ Plug 'tpope/vim-fugitive'
 " Tmux
 Plug 'alexghergh/nvim-tmux-navigation'
 
+" Window submode
+Plug 'https://github.com/kana/vim-submode.git' "Window submode
+
 call plug#end()
 
