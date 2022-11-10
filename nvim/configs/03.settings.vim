@@ -115,20 +115,27 @@ set grepprg=rg\ --vimgrep\ --smart-case\ --follow " Use ripgrep instead of grep
 "}}
 
 "{{ Tmux and vim navigation
-nnoremap <silent> <C-h> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>
-nnoremap <silent> <C-j> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>
-nnoremap <silent> <C-k> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>
-nnoremap <silent> <C-l> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>
-nnoremap <silent> <C-\> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>
-nnoremap <silent> <C-Space> :lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_save_on_switch = 2
+let g:tmux_navigator_disable_when_zoomed = 1
 
-lua <<EOF
-require'nvim-tmux-navigation'.setup {
-    disable_when_zoomed = true -- defaults to false
-}
-EOF
-
+nnoremap <silent> <C-h> <Cmd>TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> <Cmd>TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> <Cmd>TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> <Cmd>TmuxNavigateRight<CR>
 "}}
+
+"{{ Tmux and vim resize 
+let g:tmux_resizer_no_mappings = 1
+let g:tmux_resizer_resize_count = 2
+let g:tmux_resizer_vertical_resize_count = 2
+
+nnoremap <silent> <M-h> :TmuxResizeLeft<CR>
+nnoremap <silent> <M-j> :TmuxResizeDown<CR>
+nnoremap <silent> <M-k> :TmuxResizeUp<CR>
+nnoremap <silent> <M-l> :TmuxResizeRight<CR>
+"}}"
+
 
 "{{ Windown submode
 

@@ -45,7 +45,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
 
 " Tmux
-Plug 'alexghergh/nvim-tmux-navigation'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'RyanMillerC/better-vim-tmux-resizer'
 
 " Window submode
 Plug 'https://github.com/kana/vim-submode.git' "Window submode

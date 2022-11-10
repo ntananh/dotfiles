@@ -88,13 +88,16 @@ vnoremap jk <esc>
 
 " map for split buffers
 nnoremap ,v <C-w>v 
-nnoremap ,h <C-w>s 
+nnoremap ,s <C-w>s 
+nnoremap ,c <C-w>c
 nnoremap <C-w>h <C-W>\| <C-W>_  
 nnoremap <C-w>e <C-W>= 
 
-" resize split buffers
-nnoremap + :res +5<CR>
-nnoremap _ :res -5<CR>
+" resize split windowns
+" nnoremap <M-k> :res +2<CR>
+" nnoremap <M-j> :res -2<CR>
+" nnoremap <M-l> :vertical res +2<CR>
+" nnoremap <M-h> :vertical res -2<CR>
 "}}
 
 " Copy/pase {{
@@ -117,37 +120,7 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 " Remove highlight
 noremap <silent> <esc> :nohlsearch <CR>
 
-" Settings for tabs {{
-" Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
-
-" Go to left/right tab
-" noremap <silent> <A-Right> gt
-" noremap <silent> <A-Left> gT
-
-" vnoremap <silent> <A-Right> gt
-" vnoremap <silent> <A-Left> gT
-
-" Go to last active tab
-au TabLeave * let g:lasttab = tabpagenr()
-nnoremap <silent> <C-;> :exe "tabn ".g:lasttab<cr>
-vnoremap <silent> <C-;> :exe "tabn ".g:lasttab<cr>
-"}}
-
 " Mapping configs for FZF {{
 noremap <silent> <C-f> :Files<CR>
 noremap <silent> <M-f> :Rg<CR>
 " }}
-
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType css setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
