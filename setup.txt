@@ -1,6 +1,7 @@
 Tools:
 	- alacritty
-	- tmux 
+	- tmux:
+		- tpm: tmux plugins manager 
 	- fzf: Fuzzy Finder
 	- rg: RipGrep
 	- bat: Preview file
