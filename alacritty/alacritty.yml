@@ -47,8 +47,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 15
-    y: 15
+    x: 10
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -198,14 +198,14 @@ schemes:
   ### One Dark ###
   OneDark: &OneDark
     primary:
-      background: '#21252b'
+      background: '#282c34'
       foreground: '#abb2bf'
 
     # Normal colors
     normal:
       # NOTE: Use '#131613' for the `black` color if you'd like to see
       # black text on the background.
-      black:   '#21252b'
+      black:   '#282c34'
       red:     '#e06c75'
       green:   '#98c379'
       yellow:  '#e5c07b'
