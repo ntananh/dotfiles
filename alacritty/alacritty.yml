@@ -113,7 +113,7 @@ scrolling:
 
 
 # Font configuration
-# [important] Run command to make font smooth  
+# [!important] Run command to make font smooth in macOS 
 #   defaults -currentHost write -g AppleFontSmoothing -int 0
 #
 font:
