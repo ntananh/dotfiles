@@ -1,8 +1,12 @@
 " Setting for plugin
 let g:jsx_ext_required = 0
 
-"{{ Theme
+"{{ Font
+let g:enable_italic_font = 1
+let g:enable_bold_font = 1
+"}}
 
+"{{ Theme
 if (has("autocmd"))
   augroup colorextend
     autocmd!
@@ -12,7 +16,7 @@ if (has("autocmd"))
     autocmd ColorScheme * call onedark#extend_highlight("Statement", { "fg": { "cterm": 128 } })
     " Override the `Identifier` background color in GUI mode
     autocmd ColorScheme * call onedark#extend_highlight("Identifier", { "bg": { "gui": "#333333" } })
-  augroup ENd
+  augroup END
 endif
 
 
@@ -66,15 +70,13 @@ augroup END
 "}}
 
 "{{ Airline 
-let g:airline_theme='deus'
+let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#fnamemod=':t'
-let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#whitespace#enabled=0
 let g:airline#extensions#whitespace#formatter='unique_tail'
 
 "enable show brach name
-let g:airline#extensions#tabline#enabled=1
+"let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#hunks#coc_git=1
@@ -83,15 +85,42 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" airline symbols
+" Airline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '  '
+let g:airline_symbols.colnr = ' ㏇:'
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' ﬌'
+let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.dirty = ' ⚡'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_mode_map = {
+  \ '__'     : '-',
+  \ 'c'      : 'C',
+  \ 'i'      : 'I',
+  \ 'ic'     : 'I',
+  \ 'ix'     : 'I',
+  \ 'n'      : 'N',
+  \ 'multi'  : 'M',
+  \ 'ni'     : 'N',
+  \ 'no'     : 'N',
+  \ 'R'      : 'R',
+  \ 'Rv'     : 'R',
+  \ 's'      : 'S',
+  \ 'S'      : 'S',
+  \ ''     : 'S',
+  \ 't'      : 'T',
+  \ 'v'      : 'V',
+  \ 'V'      : 'V',
+  \ ''     : 'V',
+  \ }
+"}}
+
+"{{ Autor Pairs 
+let g:AutoPairsShortcutToggle = ''  
 "}}
 
 "{{ Auto close tage
@@ -103,13 +132,11 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
 "}}
 
-"{{ Font
-let g:enable_italic_font = 1
-let g:enable_bold_font = 1
-
-"}}
 
 "FZF {{
+noremap <silent> <C-f> :Files<CR>
+noremap <silent> <M-f> :Rg<CR>
+
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow " Use ripgrep instead of grep
 "}}
@@ -165,3 +192,31 @@ for key in ['=','_','+','-','<','>']
   call submode#map('window', 'n', '', key, '<C-w>' . key)
 endfor
 "}}
+" {{ [barbar.vim] Buffer manipulate
+" Move around buffers previous/next
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.icon_pinned = ''
+
+nnoremap <M-left> :BufferPrevious<CR>
+nnoremap <M-right> :BufferNext<CR>
+
+" Re-order to previous/next
+nnoremap <silent> <M-<> :BufferMovePrevious<CR>
+nnoremap <silent> <M->> :BufferMoveNext<CR>
+
+" Pin/unpin buffer
+nnoremap <silent> <M-p> :BufferPin<CR>
+
+" Close buffer
+nnoremap <silent> <M-c> :BufferClose<CR>
+
+" Magic buffer-picking mode
+nnoremap <silent> <M-s> :BufferPick<CR>
+
+" Sort automatically by...
+nnoremap <silent> <leader>bb :BufferOrderByBufferNumber<CR>
+nnoremap <silent> <leader>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <leader>bl :BufferOrderByLanguage<CR>
+nnoremap <silent> <leader>bw :BufferOrderByWindowNumber<CR>
+" }}

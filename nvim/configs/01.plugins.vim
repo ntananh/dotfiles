@@ -29,9 +29,12 @@ Plug 'joshdick/onedark.vim' " Onedark theme
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 
 " Vim airline
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim' " buffer bar 
 Plug 'vim-airline/vim-airline-themes' " Status bar theme
-Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-surround' " Surround
+
+" Surround
+Plug 'tpope/vim-surround' 
 
 " color preview
 Plug 'gko/vim-coloresque'

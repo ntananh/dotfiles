@@ -13,7 +13,6 @@ filetype plugin indent on
 set hidden
 set nocompatible
 set tabpagemax=100
-set guitablabel=\[%N\]\ %t\ %M
 
 set mouse=a
 set scroll=10
@@ -29,7 +28,6 @@ set hlsearch
 set smartcase
 set incsearch
 set ignorecase
-"set updatetime=500
 "}}
 
 set splitbelow
@@ -58,21 +56,14 @@ set nowrap
 set visualbell
 set noerrorbells
 
-" change 2 split windowns from vert to horiz or horiz to vert
-map <Leader>th <C-w>t<C-w>H
-map <Leader>tk <C-w>t<C-w>K
-
-" move around buffers
-map <M-right> :bn<CR>
-map <M-left> :bp<CR>
-map <M-d> :bd<CR>
-
 "imap
 inoremap jk <esc>
 
 " nmap
 noremap L $
 noremap H ^
+nnoremap ; :
+noremap <esc><esc> :nohlsearch<CR>
 
 "vmap
 vnoremap L $
@@ -80,24 +71,15 @@ vnoremap H ^
 vnoremap jk <esc>
 
 " Slit and tabled files mapping {{
-"splits and tabled files, move around tabs
-" noremap <C-j> <C-w><C-j>
-" noremap <C-k> <C-w><C-k>
-" noremap <C-l> <C-w><C-l>
-" noremap <C-h> <C-w><C-h>
-
-" map for split buffers
+" Map for split windown
 nnoremap ,v <C-w>v 
 nnoremap ,s <C-w>s 
 nnoremap ,c <C-w>c
 nnoremap <C-w>h <C-W>\| <C-W>_  
 nnoremap <C-w>e <C-W>= 
-
-" resize split windowns
-" nnoremap <M-k> :res +2<CR>
-" nnoremap <M-j> :res -2<CR>
-" nnoremap <M-l> :vertical res +2<CR>
-" nnoremap <M-h> :vertical res -2<CR>
+" change 2 split windowns from vert to horiz or horiz to vert
+map <leader>th <C-w>t<C-w>H
+map <leader>tk <C-w>t<C-w>K
 "}}
 
 " Copy/pase {{
@@ -117,10 +99,3 @@ vnoremap <leader>P "+P
 " Search selected text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
-" Remove highlight
-noremap <silent> <esc> :nohlsearch <CR>
-
-" Mapping configs for FZF {{
-noremap <silent> <C-f> :Files<CR>
-noremap <silent> <M-f> :Rg<CR>
-" }}
