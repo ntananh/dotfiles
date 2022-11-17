@@ -73,7 +73,7 @@ vnoremap jk <esc>
 " Slit and tabled files mapping {{
 " Map for split windown
 nnoremap ,v <C-w>v 
-nnoremap ,s <C-w>s 
+nnoremap ,h <C-w>s 
 nnoremap ,c <C-w>c
 nnoremap <C-w>h <C-W>\| <C-W>_  
 nnoremap <C-w>e <C-W>= 
