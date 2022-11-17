@@ -30,6 +30,14 @@ set incsearch
 set ignorecase
 "}}
 
+" Highlight current line{{
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#333333 ctermbg=234
+"}}
+
 set splitbelow
 set splitright
 set autoindent
