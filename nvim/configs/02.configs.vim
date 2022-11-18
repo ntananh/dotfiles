@@ -44,7 +44,7 @@ set autoindent
 set smartindent
 set number relativenumber
 
-set noexpandtab
+set expandtab
 set smarttab
 set tabstop=4
 set softtabstop=4
