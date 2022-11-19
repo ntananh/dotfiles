@@ -17,3 +17,6 @@ Tools:
 
 Font:
     - JetBrains Mono Nerd Font Complete Mono
+
+Note:
+    On mac didn't have tmux-256color so tmux cannot work property. #see: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
