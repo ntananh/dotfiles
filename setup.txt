@@ -1,19 +1,19 @@
 Tools:
-	- alacritty
-	- tmux:
-		- tpm: tmux plugins manager 
-	- fzf: Fuzzy Finder
-	- rg: RipGrep
-	- bat: Preview file
-	- fd-find: Alternative to `find`
-	- git: Git
-	- lazygit
-	- neovim: Neovim 
-	- zsh
-	- oh-my-zsh
-	- rip-grep
-	- htop
-	- exa
+    - alacritty
+    - tmux:
+        - tpm: tmux plugins manager 
+    - fzf: Fuzzy Finder
+    - rg: RipGrep
+    - bat: Preview file
+    - fd-find: Alternative to `find`
+    - git: Git
+    - lazygit
+    - neovim: Neovim 
+    - zsh
+    - oh-my-zsh
+    - rip-grep
+    - htop
+    - exa
 
 Font:
-	- JetBrains Mono Nerd Font Complete Mono
+    - JetBrains Mono Nerd Font Complete Mono
