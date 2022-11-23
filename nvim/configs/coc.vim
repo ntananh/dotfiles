@@ -15,6 +15,7 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ 'coc-emmet',
       \ 'coc-tag',
+      \ 'coc-rust-analyzer'
       \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
