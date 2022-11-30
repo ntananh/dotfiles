@@ -32,6 +32,7 @@ set ignorecase
 
 " Highlight current line{{
 set cursorline
+set cursorcolumn
 hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
