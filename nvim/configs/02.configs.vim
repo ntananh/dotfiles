@@ -30,13 +30,21 @@ set incsearch
 set ignorecase
 "}}
 
+" Highlight current line{{
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#333333 ctermbg=234
+"}}
+
 set splitbelow
 set splitright
 set autoindent
 set smartindent
 set number relativenumber
 
-set noexpandtab
+set expandtab
 set smarttab
 set tabstop=4
 set softtabstop=4
@@ -73,7 +81,7 @@ vnoremap jk <esc>
 " Slit and tabled files mapping {{
 " Map for split windown
 nnoremap ,v <C-w>v 
-nnoremap ,s <C-w>s 
+nnoremap ,h <C-w>s 
 nnoremap ,c <C-w>c
 nnoremap <C-w>h <C-W>\| <C-W>_  
 nnoremap <C-w>e <C-W>= 
