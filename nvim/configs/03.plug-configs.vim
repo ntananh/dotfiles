@@ -134,6 +134,8 @@ let g:closetag_shortcut = '>'
 
 
 "FZF {{
+let $FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --exclude .git"
+
 noremap <silent> <C-f> :Files<CR>
 noremap <silent> <M-f> :Rg<CR>
 
