@@ -14,7 +14,7 @@ Tools:
     - git: Git
     - lazygit
     - neovim: Neovim 
-        run first: sudo add-apt-repository ppa:neovim-ppa/stable
+        prefer build from source
     - rclone: for manage files on cloud storage
     - rip-grep
     - htop
