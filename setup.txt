@@ -8,6 +8,9 @@ Tools:
     - tmux:
         - tpm: tmux plugins manager 
     - fzf: Fuzzy Finder
+        - on linux pls run key-binding: source /usr/share/doc/fzf/examples/...
+        - on mac: update later, but still need to run scripts 
+        => https://github.com/junegunn/fzf/issues/1866
     - rg: RipGrep
     - bat: Preview file
     - fd-find: Alternative to `find`
