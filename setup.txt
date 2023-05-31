@@ -1,5 +1,10 @@
 Tools:
     - alacritty
+    - zsh
+        - zsh-autosuggestions
+        - powerlevel10k
+    - oh-my-zsh
+    - font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/JetBrainsMono.zip
     - tmux:
         - tpm: tmux plugins manager 
     - fzf: Fuzzy Finder
@@ -9,14 +14,14 @@ Tools:
     - git: Git
     - lazygit
     - neovim: Neovim 
-    - zsh
-    - oh-my-zsh
+        run first: sudo add-apt-repository ppa:neovim-ppa/stable
+    - rclone: for manage files on cloud storage
     - rip-grep
     - htop
     - exa
 
 Font:
-    - JetBrains Mono Nerd Font Complete Mono
+    - JetBrains Mono Nerd Font Complete Mono: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/JetBrainsMono.zip
 
 Note:
     On mac didn't have tmux-256color so tmux cannot work property. #see: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95

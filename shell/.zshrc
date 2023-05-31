@@ -118,6 +118,8 @@ alias zshsrc="source ~/.zshrc"
 alias nvimcfg="nvim ~/.config/nvim"
 
 alias cls="clear"
+alias bat="batcat"
+alias fd="fdfind"
 alias ls="exa --all --long --icons --color=auto"
 alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias lg="lazygit"
