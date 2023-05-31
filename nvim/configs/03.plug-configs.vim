@@ -197,8 +197,15 @@ endfor
 " {{ [barbar.vim] Buffer manipulate
 " Move around buffers previous/next
 " NOTE: If barbar's option dict isn't created yet, create it
-let bufferline = get(g:, 'bufferline', {})
-let bufferline.icon_pinned = ''
+"let bufferline = get(g:, 'bufferline', {})
+"let bufferline.icon_pinned = ''
+lua << EOF
+    require'barbar'.setup {
+        icons = {
+            pinned = {button = '', filename = true},
+        },
+    }
+EOF
 
 nnoremap <M-left> :BufferPrevious<CR>
 nnoremap <M-right> :BufferNext<CR>
