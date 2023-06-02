@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Mounting work notes..."
+
+WORK_NOTES_DIR="$HOME/Documents/work-notes"
+
+if [ ! -d "$WORK_NOTES_DIR" ]; then
+	echo "Creating work notes directory"
+	mkdir -p "$WORK_NOTES_DIR"
+fi
+
+echo "Happy working 󰣇"
+rclone --vfs-cache-mode writes mount --daemon onedrive:notes "$WORK_NOTES_DIR"
+
+exit 0
