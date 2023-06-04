@@ -22,7 +22,9 @@ Tools:
     - rip-grep
     - htop
     - exa
-
+    - Mac: 
+        - yabai
+        - sketchybar
 Font:
     - JetBrains Mono Nerd Font Complete Mono: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/JetBrainsMono.zip
 
