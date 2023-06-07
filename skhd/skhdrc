@@ -88,8 +88,8 @@ cmd + ctrl + shift - s : yabai -m window --insert stack
 cmd + shift - t : $HOME/.config/skhd/term.sh
 
 # New window in hor./ vert. splits for all applications with yabai
-cmd - s : yabai -m window --insert east;  skhd -k "cmd - n"
-cmd - v : yabai -m window --insert south; skhd -k "cmd - n"
+cmd - r : yabai -m window --insert east;  skhd -k "cmd - n"
+cmd - d : yabai -m window --insert south; skhd -k "cmd - n"
 
 # Toggle sketchybar
 cmd + ctrl + shift - space : sketchybar --bar hidden=toggle
