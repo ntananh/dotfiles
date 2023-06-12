@@ -5,11 +5,12 @@ set nowritebackup
 set updatetime=300
 
 let g:coc_global_extensions = [
-      \ 'coc-go',
+      \ 'coc-java',
+      \ 'coc-python',
+      \ 'coc-perl',
       \ 'coc-tsserver',
       \ 'coc-html',
       \ 'coc-css',
-      \ 'coc-python',
       \ 'coc-yaml',
       \ 'coc-json',
       \ 'coc-vimlsp',
