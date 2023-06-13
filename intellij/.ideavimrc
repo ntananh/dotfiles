@@ -1,0 +1,125 @@
+" Causes problems with some mappings
+source ~/.config/nvim/configs/02.nvim-configs.vim
+
+let mapleader = " "
+
+set number
+set incsearch
+set ignorecase
+set smartcase
+set relativenumber
+set multiple-cursors
+set clipboard+=unnamed
+set surround
+set highlightedyank
+set relativenumber
+set showmode
+set ideaput
+set ideajoin
+set ideamarks
+set idearefactormode=keep
+set cursorcolumn
+set cursorline
+set visualbell
+
+
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
+
+noremap <SPACE> <Nop>
+noremap <ESC><ESC> :nohlsearch<CR>
+
+inoremap jk <ESC>
+vnoremap jk <ESC>
+
+noremap <Esc> <nop>
+
+" system clipboard
+vmap <leader>yiw    "+yiw
+nmap <leader>yiw    "+yiw
+vmap <leader>y      "+y
+vmap <leader>d      "_d
+nmap <leader>y      "+yy
+nmap <leader>p      "+p
+nmap <leader>P      "+P
+vmap <leader>p      "+p
+vmap <leader>P      "+P
+
+" scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+
+nnoremap mp :action PasteMultiple <CR>
+nnoremap R :action RenameElement <CR>
+
+" formatting
+nnoremap == :action ReformatCode <CR>
+vnoremap == :action ReformatCode <CR>
+nnoremap -- :action OptimizeImports <CR>
+vnoremap -- :action OptimizeImports <CR>
+
+nnoremap cc :action CommentByLineComment <CR>
+vnoremap cc :action CommentByLineComment <CR>
+
+
+" split window
+nnoremap ,v :action SplitVertically <CR>
+nnoremap ,h :action SplitHorizontally <CR>
+nnoremap ,c :action UnsplitAll <CR>
+nnoremap <leader>v :action NextSplitter <CR>
+
+" search
+nmap <leader>fp :action FindInPath<CR>
+vmap <leader>fp :action FindInPath<CR>
+nnoremap U :action FindUsages <CR>
+vnoremap U :action FindUsages <CR>
+nnoremap ,f :action SearchEverywhere <CR>
+
+" tabs
+nmap <leader>h :action PreviousTab<CR>
+nmap <leader>l :action NextTab<CR>
+nmap <leader>bd :action CloseEditor<CR>
+nnoremap <leader>c :action CloseContent <CR>
+
+" extract
+nnoremap <leader>iv :action IntroduceVariable <CR>
+nnoremap <leader>em :action ExtractMethod  <Cr>
+vnoremap <leader>em :action ExtractMethod  <Cr>
+nnoremap <leader>ic :action IntroduceConstant <CR>
+
+" file navigation
+nnoremap g, :action JumpToLastChange                <CR>
+nnoremap g. :action JumpToNextChange                <CR>
+nnoremap gh :action Back                            <CR>
+nnoremap gl :action Forward                         <CR>
+nnoremap gj :action MethodDown                      <CR>
+nnoremap gk :action MethodUp                        <CR>
+nnoremap gs :action GotoSuperMethod                 <CR>
+nnoremap gi :action GotoImplementation              <CR>
+nnoremap gd :action GotoDeclaration                 <CR>
+nnoremap gr :action RecentFiles                     <CR>
+nnoremap <leader>ga :action GotoAction              <CR>
+vnoremap <leader>ga :action GotoAction              <CR>
+nnoremap <leader>gc :action GotoClass               <CR>
+vnoremap <leader>gc :action GotoClass               <CR>
+nnoremap <leader>gf :action GotoFile                <CR>
+vnoremap <leader>gf :action GotoFile                <CR>
+nnoremap <leader>ww :action HideAllWindows          <CR>
+nnoremap <leader>gt :action GotoTest                <CR>
+nnoremap <leader>rc :action RunClass                <CR>
+nnoremap <leader>gq :action QuickList.Git           <CR>
+nnoremap <leader>nc :action NewClass                <CR>
+nnoremap <leader>ns :action NewScratchFile          <CR>
+nnoremap <leader>nf :action NewElementSamePlace     <CR>
+nnoremap <leader>ge :action Generate                <CR>
+vnoremap <leader>re :action Replace                 <CR>
+nnoremap <leader>re :action Replace                 <CR>
+nnoremap <leader>ss :action SelectInProjectView     <CR>
+nnoremap ,rc :action ChooseRunConfiguration         <CR>
+
+" useful
+nnoremap <C-A> gg<S-v>G
