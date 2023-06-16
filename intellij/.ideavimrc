@@ -53,8 +53,8 @@ nmap <leader>u <C-u>
 vmap <leader>d <C-d>
 vmap <leader>u <C-u>
 
-nnoremap mp :action PasteMultiple <CR>
-nnoremap R :action RenameElement <CR>
+nnoremap <leader>pm :action PasteMultiple <CR>
+nnoremap <leader>rn  :action RenameElement <CR>
 
 " formatting
 nnoremap == :action ReformatCode <CR>
@@ -62,28 +62,31 @@ vnoremap == :action ReformatCode <CR>
 nnoremap -- :action OptimizeImports <CR>
 vnoremap -- :action OptimizeImports <CR>
 
-nnoremap cc :action CommentByLineComment <CR>
-vnoremap cc :action CommentByLineComment <CR>
-
+nnoremap <leader>c :action CommentByLineComment <CR>
+vnoremap <leader>c :action CommentByLineComment <CR>
 
 " split window
 nnoremap ,v :action SplitVertically <CR>
 nnoremap ,h :action SplitHorizontally <CR>
 nnoremap ,c :action UnsplitAll <CR>
 nnoremap <leader>v :action NextSplitter <CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " search
-nmap <leader>fp :action FindInPath<CR>
-vmap <leader>fp :action FindInPath<CR>
-nnoremap U :action FindUsages <CR>
-vnoremap U :action FindUsages <CR>
-nnoremap ,f :action SearchEverywhere <CR>
+nmap <leader>fp     :action FindInPath<CR>
+vmap <leader>fp     :action FindInPath<CR>
+nnoremap <leader>fu :action FindUsages <CR>
+vnoremap <leader>fu :action FindUsages <CR>
+nnoremap ,f         :action SearchEverywhere <CR>
 
 " tabs
-nmap <leader>h :action PreviousTab<CR>
-nmap <leader>l :action NextTab<CR>
-nmap <leader>bd :action CloseEditor<CR>
-nnoremap <leader>c :action CloseContent <CR>
+nmap <M-left>   :action PreviousTab<CR>
+nmap <M-right>  :action NextTab<CR>
+nmap <M-d>      :action CloseEditor<CR>
+nnoremap <M-c>  :action CloseContent <CR>
 
 " extract
 nnoremap <leader>iv :action IntroduceVariable <CR>
