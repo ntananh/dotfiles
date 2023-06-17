@@ -1,4 +1,4 @@
-" Causes problems with some mappings
+" In mac remap Tool Windows/Project => <M-1>
 source ~/.config/nvim/configs/02.nvim-configs.vim
 
 let mapleader = " "
