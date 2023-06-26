@@ -844,10 +844,9 @@ cursor:
 #  program: /bin/bash
 #  args:
 #    - --login
-shell:
-  program: /opt/homebrew/bin/tmux
-  args:
-    - -u # force UTF-8 in tmux
+#  program: /opt/homebrew/bin/tmux
+#  args:
+#    - -u # force UTF-8 in tmux
     #- -2 # force tmux to assume the terminal supports 256-color mode
     
 # Startup directory
