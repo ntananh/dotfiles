@@ -25,6 +25,9 @@ Tools:
     - Mac: 
         - yabai
         - sketchybar
+    -barrier: prefer using LAN to connect
+        - set up LAN in linux: IPv4/IPv6 method: Shared to other computers
+        - set up LAN in mac: IPv4/IPv6 method: Use DHCP
 Font:
     - JetBrains Mono Nerd Font Complete Mono: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/JetBrainsMono.zip
 
