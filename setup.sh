@@ -8,5 +8,6 @@ ln -sfn $DOTFILE_DIR/shell/.zshrc $HOME/.zshrc
 ln -sfn $DOTFILE_DIR/yabai $HOME/.config/yabai 
 ln -sfn $DOTFILE_DIR/skhd $HOME/.config/skhd 
 ln -sfn $DOTFILE_DIR/sketchybar $HOME/.config/sketchybar 
+ln -sfn $DOTFILE_DIR/i3 $HOME/.config/i3 
 ln -sfn /usr/bin/batcat /usr/local/bin/bat
 ln -sfn /usr/bin/fdfind /usr/local/bin/fd
