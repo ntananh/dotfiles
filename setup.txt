@@ -22,6 +22,10 @@ Tools:
     - rip-grep
     - htop
     - exa
+    - Linux: 
+        - i3: 
+            - Theme: https://github.com/tinted-theming/base16-i3/
+        - polybar
     - Mac: 
         - yabai
         - sketchybar
@@ -29,6 +33,7 @@ Tools:
         - set up LAN in linux: IPv4/IPv6 method: Shared to other computers
         - set up LAN in mac: IPv4/IPv6 method: Use DHCP
 Font:
+    - Nerd Font: https://github.com/ryanoasis/nerd-fonts
     - JetBrains Mono Nerd Font Complete Mono: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/JetBrainsMono.zip
 
 Note:
