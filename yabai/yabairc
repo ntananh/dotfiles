@@ -14,6 +14,7 @@ yabai -m signal --add event=window_destroyed action="sketchybar --trigger window
 $HOME/.config/yabai/create_spaces.sh
 
 yabai -m config external_bar               all:35:0     \
+                layout                     bsp          \
                 mouse_follows_focus        off          \
                 focus_follows_mouse        autofocus    \
                 window_zoom_persist        off          \
@@ -49,7 +50,5 @@ yabai -m rule --add app="${JB_Apps}" manage=off
 # If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
 # yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on 
 yabai -m rule --add app="${JB_Apps}" title="^$"  manage=on
-
-yabai -m config layout bsp
 
 echo "yabai configuration loaded.."
