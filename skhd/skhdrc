@@ -85,7 +85,7 @@ cmd + ctrl + shift - s : yabai -m window --insert stack
 
 ## Misc
 # Open new Alacritty window
-cmd + shift - t : $HOME/.config/skhd/term.sh
+cmd - 0x24 : $HOME/.config/skhd/term.sh
 
 # New window in hor./ vert. splits for all applications with yabai
 cmd - r : yabai -m window --insert east;  skhd -k "cmd - n"
