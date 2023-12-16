@@ -1,9 +1,16 @@
 ## Navigation (lalt - ...)
 # Space Navigation (four spaces per display): cmd - {1, 2, 3, 4}
-cmd - 1 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[1] ]] && yabai -m space --focus $SPACES[1]
-cmd - 2 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[2] ]] && yabai -m space --focus $SPACES[2]
-cmd - 3 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[3] ]] && yabai -m space --focus $SPACES[3]
-cmd - 4 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[4] ]] && yabai -m space --focus $SPACES[4]
+#cmd - 1 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[1] ]] && yabai -m space --focus $SPACES[1]
+#cmd - 2 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[2] ]] && yabai -m space --focus $SPACES[2]
+#cmd - 3 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[3] ]] && yabai -m space --focus $SPACES[3]
+#cmd - 4 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[4] ]] && yabai -m space --focus $SPACES[4]
+
+# Fix focus space on Sonoma  14.2
+cmd - 1 : yabai -m space --focus 1; skhd -k "alt - 1"
+cmd - 2 : yabai -m space --focus 2; skhd -k "alt - 2"
+cmd - 3 : yabai -m space --focus 3 skhd -k "alt - 3"
+cmd - 4 : yabai -m space --focus 4; skhd -k "alt - 4"
+cmd - 5 : yabai -m space --focus 5; skhd -k "alt - 5"
 
 # Window Navigation (through display borders): lalt - {h, j, k, l}
 cmd - k     : yabai -m window --focus north || yabai -m display --focus north
