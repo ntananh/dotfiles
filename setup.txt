@@ -26,6 +26,7 @@ Tools:
         - i3: 
             - Theme: https://github.com/tinted-theming/base16-i3/
         - polybar
+        - autorandr: for auto switch screen
     - Mac: 
         - yabai
         - sketchybar
