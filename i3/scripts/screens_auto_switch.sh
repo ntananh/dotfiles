@@ -6,15 +6,15 @@ if xrandr | grep -qE '^HDMI-A-0 connected 1920x1080' ; then
   # polybar needs to be relauch after this
   sleep 5
   ~/.config/polybar/launch.sh
-elif xrandr | grep -qE '^DP-1 connected 3440x1440' ; then
+elif xrandr | grep -qE '^DP-0 connected' ; then
   notify-send "wide screen detected, let's disable the internal screen"
-  xrandr --output eDP-1 --off --output DP-1 --primary
+  xrandr --output eDP --off --output DP-0 --primary
   # polybar needs to be relauch after this
   sleep 5
   ~/.config/polybar/launch.sh
-elif xrandr | grep -qE '^DP-3 connected .*2560x1440' ; then
+elif xrandr | grep -qE '^DP-1 connected' ; then
   notify-send "external screen detected, let's disable the internal screen"
-  xrandr --output eDP-1 --off --output DP-3 --primary
+  xrandr --output eDP --off --output DP-1 --primary
   # polybar needs to be relauch after this
   sleep 5
   ~/.config/polybar/launch.sh
