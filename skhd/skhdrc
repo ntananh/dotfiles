@@ -15,7 +15,7 @@ cmd - 6 : yabai -m space --focus 6; skhd -k "alt - 6"
 cmd - 7 : yabai -m space --focus 7; skhd -k "alt - 7"
 cmd - 8 : yabai -m space --focus 8; skhd -k "alt - 8"
 cmd - 9 : yabai -m space --focus 9; skhd -k "alt - 9"
-cmd - 0 : yabai -m space --focus 0; skhd -k "alt - 0"
+cmd - 0 : yabai -m space --focus 10; skhd -k "alt - 0"
 
 # Window Navigation (through display borders): lalt - {h, j, k, l}
 cmd - k     : yabai -m window --focus north || yabai -m display --focus north
