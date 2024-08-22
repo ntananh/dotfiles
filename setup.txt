@@ -21,7 +21,7 @@ Tools:
     - rclone: for manage files on cloud storage
     - rip-grep
     - htop
-    - exa
+    - eza
     - Linux: 
         - i3: [ reference ] ( https://github.com/Algorithm79/Dotfiles_i3 )
             - Theme: https://github.com/tinted-theming/base16-i3/
