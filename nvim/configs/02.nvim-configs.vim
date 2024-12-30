@@ -103,6 +103,8 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P 
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+" replace and put back to register
+xnoremap <leader>p "_dP
 "}}
 
 " Search selected text
