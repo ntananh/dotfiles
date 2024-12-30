@@ -15,7 +15,8 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ 'coc-emmet',
       \ 'coc-tag',
-      \ 'coc-rust-analyzer'
+      \ 'coc-rust-analyzer',
+      \ 'coc-clangd'
       \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -82,3 +83,4 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+

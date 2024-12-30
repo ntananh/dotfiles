@@ -113,3 +113,7 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Compile and run C++/C code
+nnoremap <silent> <leader>r :w<CR>:!g++ % -o %:r && ./%:r<CR>
+nnoremap <silent> <leader>rc :w<CR>:!gcc % -o %:r && ./%:r<CR>

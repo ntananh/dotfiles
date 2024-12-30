@@ -1,4 +1,12 @@
 {
-    "suggest.noselect": true,
-    "rust-analyzer.enable": true
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": ["compile_commands.json", ".git/"],
+      "initializationOptions": {
+        "clangdFileStatus": true
+      }
+    }
+  }
 }
