@@ -1,3 +1,6 @@
+" Action Lists IntelliJ
+" https://gist.github.com/lexxish/6d629fa9b38581be3ece2a523879cfb7
+
 " In mac remap Tool Windows/Project => <M-1>
 source ~/dotfiles/nvim/configs/02.nvim-configs.vim
 
