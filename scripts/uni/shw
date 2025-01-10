@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Check if the input is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 \"<exercise_heading> <description>\""
+    echo "Example: $0 \"1.1 VIM configuration location\""
+    exit 1
+fi
+
+INPUT=$1
+
+# Extract the heading (X.Y) and description
+HEADING=$(echo "$INPUT" | awk '{print $1}')
+DESCRIPTION=$(echo "$INPUT" | cut -d' ' -f2-)
+
+# Validate and format the heading as NNN
+IFS='.' read -r MAJOR MINOR <<< "$HEADING"
+if [[ -z "$MAJOR" || -z "$MINOR" ]]; then
+    echo "Error: Invalid heading format. Use the format X.Y (e.g., 1.1)."
+    exit 1
+fi
+
+# Format as NNN: if major < 10, add leading 0, then append minor
+if [ "$MAJOR" -lt 10 ]; then
+    NNN=$(printf "0%d%d" "$MAJOR" "$MINOR")
+else
+    NNN=$(printf "%d%d" "$MAJOR" "$MINOR")
+fi
+
+# Format the description:
+# 1. Convert to lowercase
+# 2. Replace spaces with hyphens
+# 3. Remove any special characters
+FILE_NAME="${NNN}-$(echo "$DESCRIPTION" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed 's/[^a-z0-9-]//g').txt"
+
+# Get current date in YYYY-MM-DD format
+CURRENT_DATE=$(date +"%Y-%m-%d")
+
+# Generate the new file
+cat <<EOF > "$FILE_NAME"
+# Author: Nguyen Anh <anh.4.nguyen@tuni.fi>
+# Date: $CURRENT_DATE
+#
+# Answer to exercise "$INPUT"
+#
+# Anything with '#' is a comment.
+# The answer appears in line(s) of their own
+
+<answer>
+
+# End of file
+
+EOF
+
+echo "File created: $FILE_NAME"
