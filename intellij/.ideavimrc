@@ -6,6 +6,7 @@ source ~/dotfiles/nvim/configs/02.nvim-configs.vim
 
 let mapleader = " "
 
+set clipboard+=ideaput
 set number
 set incsearch
 set ignorecase
