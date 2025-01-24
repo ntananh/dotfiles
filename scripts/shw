@@ -49,7 +49,6 @@ cat <<EOF > "$FILE_NAME"
 <answer>
 
 # End of file
-
 EOF
 
 echo "File created: $FILE_NAME"
