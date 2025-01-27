@@ -33,7 +33,6 @@ let g:rainbow_active = 1
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 noremap <C-n> :NERDTreeToggle<CR>
-noremap <M-r> :NERDTreeRefreshRoot<CR>
 let g:NERDTreeShowLineNumbers=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=30
