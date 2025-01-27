@@ -1,0 +1,74 @@
+# Alacritty Configuration File
+
+# Environment Variables
+[env]
+TERM                = "xterm-256color"
+
+# General Configuration
+# Import additional configuration files
+[general]
+import              = [
+    "~/.config/alacritty/keyboard.toml",
+    "~/.config/alacritty/themes/themes/one_dark.toml"
+]
+
+# Window Configuration
+[window]
+title               = "Alacritty"                 # Window title
+dynamic_title       = true                        # Allow dynamic titles
+startup_mode        = "Maximized"                 # Start in maximized mode
+padding             = { x = 10, y = 10 }          # Window padding
+decorations         = "Buttonless"                # Mac-only: hide buttons in decorations
+option_as_alt       = "Both"                      # Use both Option keys as Alt
+
+# Scrolling Configuration
+[scrolling]
+history             = 5000                        # Lines to keep in scrollback history
+
+# Font Configuration
+[font]
+normal              = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold                = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+size                = 15.0                        # Font size
+offset              = { x = 0, y = 1 }            # Offset for glyph rendering
+
+# Colors
+[colors]
+# Primary Colors
+primary.background  = "#282c34"                   # Background color
+primary.foreground  = "#abb2bf"                   # Foreground color
+
+# Normal Colors
+[colors.normal]
+black               = "#282c34"
+red                 = "#e06c75"
+green               = "#98c379"
+yellow              = "#e5c07b"
+blue                = "#61afef"
+magenta             = "#c678dd"
+cyan                = "#56b6c2"
+white               = "#abb2bf"
+
+# Bright Colors
+[colors.bright]
+black               = "#767676"
+red                 = "#e06c75"
+green               = "#98c379"
+yellow              = "#e5c07b"
+blue                = "#61afef"
+magenta             = "#c678dd"
+cyan                = "#56b6c2"
+white               = "#abb2bf"
+
+# Cursor Configuration
+[cursor]
+style               = { shape = "Block", blinking = "On" }
+
+# Keyboard Configuration
+[keyboard]
+bindings = [
+    # copy-paste like iTerm
+    { key = "C",      mods = "Command|Shift", action = "Copy" },
+    { key = "V",      mods = "Command|Shift", action = "Paste" },
+]
+
