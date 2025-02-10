@@ -59,6 +59,28 @@ cmd + shift - 4 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]'
                   && yabai -m window --space $SPACES[4] \
                   && sketchybar --trigger windows_on_spaces
 
+cmd + shift - 5 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[5] ]] \
+                  && yabai -m window --space $SPACES[5] \
+                  && sketchybar --trigger windows_on_spaces
+
+cmd + shift - 6 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[6] ]] \
+                  && yabai -m window --space $SPACES[6] \
+                  && sketchybar --trigger windows_on_spaces
+
+cmd + shift - 7 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[7] ]] \
+                  && yabai -m window --space $SPACES[7] \
+                  && sketchybar --trigger windows_on_spaces
+
+cmd + shift - 8 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[8] ]] \
+                  && yabai -m window --space $SPACES[8] \
+                  && sketchybar --trigger windows_on_spaces
+
+cmd + shift - 9 : SPACES=($(yabai -m query --displays --display | jq '.spaces[]')) && [[ -n $SPACES[9] ]] \
+                  && yabai -m window --space $SPACES[9] \
+                  && sketchybar --trigger windows_on_spaces
+
+
+
 cmd + shift - p : yabai -m window --space prev && yabai -m space --focus prev && sketchybar --trigger windows_on_spaces
 cmd + shift - n : yabai -m window --space next && yabai -m space --focus next && sketchybar --trigger windows_on_spaces
 
