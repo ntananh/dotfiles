@@ -54,5 +54,7 @@ Plug 'RyanMillerC/better-vim-tmux-resizer'
 " Window submode
 Plug 'https://github.com/kana/vim-submode.git' "Window submode
 
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
