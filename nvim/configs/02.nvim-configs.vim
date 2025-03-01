@@ -4,7 +4,7 @@ syntax on
 colorscheme onedark
 
 set list
-set listchars=eol:¬,trail:⋅
+set listchars=tab:»\, trail:·, eol:¬, space:·
 
 filetype off
 filetype plugin on
