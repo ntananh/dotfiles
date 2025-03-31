@@ -130,6 +130,7 @@ alias cls="clear"
 alias ls="eza --all --long --icons --color=auto"
 alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias lg="lazygit"
+alias ld="lazydocker"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -16,6 +16,7 @@ Tools:
     - fd-find: Alternative to `find`
     - git: Git
     - lazygit
+    - lazydocker
     - neovim: Neovim 
         prefer build from source
     - rclone: for manage files on cloud storage
